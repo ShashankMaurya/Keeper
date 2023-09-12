@@ -1,11 +1,10 @@
 import react from "react";
+import Card from "./Card";
+import notes from "../notes"
 
 function Note() {
     return (
-        <div className="note">
-            <h1>Title</h1>
-            <p>Content</p>
-        </div>
+        notes.map((note) => <Card key = {note.key} title={note.title} content={note.content} />)
     );
 }
 
